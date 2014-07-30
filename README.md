@@ -1,0 +1,4 @@
+macdot
+======
+
+mac developing environment
