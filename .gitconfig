@@ -1,0 +1,16 @@
+[user]
+	email = hunter.dding@gmail.com
+	name = zhang-ning
+[push]
+	default = matching
+[alias]
+	ci = commit -av
+	st = status
+	co = checkout
+	br = branch
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = No
+[core]
+	editor = vim
