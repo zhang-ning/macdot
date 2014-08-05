@@ -2,7 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 export CLICOLOR=1
+export SVN_EDITOR=vim
 export PATH=~/Apps:$PATH;
+#export PATH=~/Android/sdk/platform-tools:~/Android/sdk/tools:$PATH;
 alias g="gvim -f 2>/dev/null "
 # for tmux
 export TERM="screen-256color"

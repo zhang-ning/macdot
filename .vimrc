@@ -11,7 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 
-"Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'endel/vim-github-colorscheme'
@@ -36,6 +36,7 @@ Bundle "magic-dot-files/TagHighlight"
 Bundle "edkolev/tmuxline.vim"
 Bundle "majutsushi/tagbar"
 Bundle "Valloric/YouCompleteMe"
+Bundle 'cakebaker/scss-syntax.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -90,6 +91,14 @@ set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
 set listchars=tab:▸\ ,trail:␣
 set list
 
+nmap <leader>f :NERDTreeToggle <cr>
+let g:ctrlp_map = '<leader>p'
+
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 map <leader>ew :e %%
 map <leader>es :sp %%
@@ -114,7 +123,7 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-set guifontset=Source\ Code\ Pro\ for\ Powerline\ Reqular\ 14
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 let g:airline_powerline_fonts = 1
 
 "UltiSnips setting
@@ -135,8 +144,8 @@ let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-Tab>'
 
-nmap <tab> gt
-nmap <s-tab> <s-gt>
+nmap <tab> :bn<cr>
+nmap <s-tab> :bp<cr>
 noremap <silent><Leader>/ :nohls<CR>
 
 "easy resize window resize with arrowkey  from www.vimbits.com
